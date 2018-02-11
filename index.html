@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My NFL Roster</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <form onsubmit="app.controllers.playerCtrl.submitNameForm(event)">
+                    <input type="text" placeholder="Player Name" name="name">
+                    <button type="submit">Search by Name</button>
+                </form>
+            </div>
+            <div class="col-sm-4">
+                <form onsubmit="app.controllers.playerCtrl.submitTeamForm(event)">
+                    <input type="text" placeholder="Team" name="teamName">
+                    <button type="submit">Search by Team</button>
+                </form>
+            </div>
+            <div class="col-sm-4">
+                <form onsubmit="app.controllers.playerCtrl.submitPositionForm(event)">
+                    <input type="text" placeholder="Position" name="position">
+                    <button type="submit">Search by Position</button>
+                </form>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <form onsubmit="app.controllers.playerCtrl.getAllPlayers(e)">
+                <button type="submit">Get All NFL Players</button>
+            </form>
+        </div> -->
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                Your Team
+            </div>
+            <div class="card-body my-team" id="my-team">
+                <div class="player-card">
+                    <div class="card-mg-top player-image">
+                        <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/" alt="NFL Player Photo"> </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item player-name">Player Name</li>
+                        <li class="list-group-item position">Position</li>
+                        <li class="list-group-item team">Team</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Select Your NFL Roster
+            </div>
+            <div class="card-body player-roster" id="roster">
+                <div class="player-card">
+                    <div class="card-mg-top player-image">
+                        <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/" alt="NFL Player Photo"> </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item player-name">Player Name</li>
+                        <li class="list-group-item position">Position</li>
+                        <li class="list-group-item team">Team</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- LOAD DEPENDENCIES FIRST JQUERY POPPER -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- SERVICES -->
+    <script src="player-service.js"></script>
+    <!-- CONTROLLERS -->
+    <script src="player-controller.js"></script>
+    <!-- APP -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>
