@@ -14,7 +14,6 @@ function PlayersService(callback) {
     }
 
     this.removeFromTeam = function (id){
-        debugger
         console.log("back in the service to get player by myTeam, id")
         var player = getPlayerById(myTeam, id)
         if(!player){return}
@@ -26,6 +25,7 @@ function PlayersService(callback) {
     }
 
     this.addToTeam = function (id) {
+        
         console.log("are we checking by id?")
         var playerData = getPlayerById(playersData, id)
 

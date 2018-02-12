@@ -6,10 +6,11 @@ function PlayerController() {
   var myPlayerElem = document.getElementById('my-team')
 
 
-  this.getAllPlayers = function getAllPlayers(e) {
-    e.preventDefault();
-    var players = playerService.getAllPlayers()
-  }
+  // this.getAllPlayers = function getAllPlayers(e) {
+  //   e.preventDefault();
+  //   var players = playerService.getAllPlayers()
+  // }
+
   this.getPlayersByTeam = function (teamName) {
     var players = playerService.getPlayersByTeam(teamName)
     draw(players)
@@ -67,6 +68,7 @@ function PlayerController() {
   }
 
   function drawMyTeam(arr) {
+    console.log("did i get this far?")
     var myPlayerElem = document.getElementById('my-team')
     var template = ''
     for (var i = 0; i < arr.length; i++) {
@@ -91,12 +93,15 @@ function PlayerController() {
 
 
   this.addToTeam = function addToTeam(id) {
+    debugger
     console.log('add to team')
     playerService.addToTeam(id)
+    console.log('right before the drawMyTeam')
     drawMyTeam(playerService.getMyTeam())
   }
 
   this.removeFromTeam = function removeFromTeam(id) {
+    playerService.removeFromTeam(id)
     console.log("coach says we gotta trade ya")
     drawMyTeam(playerService.getMyTeam())
   }
