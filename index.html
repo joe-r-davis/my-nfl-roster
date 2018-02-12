@@ -23,21 +23,21 @@
                 <img src="assets/images/fantasy-football.png" alt="NFL Fantasy Football logo">
                 <hr>
             </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 pd-hlf-rem">
                     <form onsubmit="app.controllers.playerCtrl.submitNameForm(event)">
-                        <input type="text" placeholder="Player Name" name="name">
+                        <input class="form-control" type="text" placeholder="Player Name" name="name">
                         <button class="btn btn-primary" type="submit">Search by Name</button>
                     </form>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 pd-hlf-rem">
                     <form onsubmit="app.controllers.playerCtrl.submitTeamForm(event)">
-                        <input type="text" placeholder="Team" name="teamName">
+                        <input class="form-control" type="text" placeholder="Team" name="teamName">
                         <button class="btn btn-primary" type="submit">Search by Team</button>
                     </form>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 pd-hlf-rem">
                     <form onsubmit="app.controllers.playerCtrl.submitPositionForm(event)">
-                        <input type="text" placeholder="Position" name="position">
+                        <input class="form-control" type="text" placeholder="Position" name="position">
                         <button class="btn btn-primary" type="submit">Search by Position</button>
                     </form>
                 </div>
@@ -50,24 +50,24 @@
         </div>
         <div class="container">
             <div class="card cards-bg-stack-opacity">
-                <div class="card-header">
-                    Your Team
+                <div class="card-header cards-header-color">
+                    <h3>Your Team</h3> 
                 </div>
                 <div class="card-body my-team" id="my-team">
                     <div class="player-card">
                         <div class="card-mg-top player-image">
                             <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/" alt="NFL Player Photo"> </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item player-name">Player Name</li>
-                            <li class="list-group-item position">Position</li>
-                            <li class="list-group-item team">Team</li>
+                            <li class="list-group-item cards-list-type player-name">Player Name</li>
+                            <li class="list-group-item cards-list-type position">Position</li>
+                            <li class="list-group-item cards-list-type team">Team</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-header">
-                    Select Your NFL Roster
+            <div class="card cards-bg-green-stack-opacity"> 
+                <div class="card-header cards-header-color">
+                    <h3>Select Players </h2>
                 </div>
                 <div class="card-body player-roster" id="roster">
                     <div class="player-card">
