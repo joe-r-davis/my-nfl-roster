@@ -42,7 +42,7 @@ function PlayersService(callback) {
 
     function getPlayerById(arr, id) {
         console.log("We can add! Load up the Player...")
-        for (var i = 0; i , arr.length; i++) {
+        for (var i = 0; i < arr.length; i++) {
             var playerData = arr[i]
             if (id == playerData.id) {
                 return playerData
