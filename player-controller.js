@@ -1,9 +1,14 @@
 function PlayerController() {
 
-  // var loading = true; //Start the spinner
-  var playerService = new PlayersService(draw)
+  var loading = true; //Start the spinner
+  var playerService = new PlayersService(ready)
   var nflPlayerElem = document.getElementById('roster')
   var myPlayerElem = document.getElementById('my-team')
+
+  function ready(){
+    loading = false;
+
+  }
 
 
   // this.getAllPlayers = function getAllPlayers(e) {
@@ -93,7 +98,6 @@ function PlayerController() {
 
 
   this.addToTeam = function addToTeam(id) {
-    debugger
     console.log('add to team')
     playerService.addToTeam(id)
     console.log('right before the drawMyTeam')

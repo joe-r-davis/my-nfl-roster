@@ -14,67 +14,76 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <form onsubmit="app.controllers.playerCtrl.submitNameForm(event)">
-                    <input type="text" placeholder="Player Name" name="name">
-                    <button type="submit">Search by Name</button>
-                </form>
+<div class="container-fluid bg-image-centered">
+    <div class="row">
+            <!-- Background image in fluid container -->
+        <div class="container">
+            <div class="row  search-row">
+            <div class="col-sm-12">
+                <img src="assets/images/fantasy-football.png" alt="NFL Fantasy Football logo">
+                <hr>
             </div>
-            <div class="col-sm-4">
-                <form onsubmit="app.controllers.playerCtrl.submitTeamForm(event)">
-                    <input type="text" placeholder="Team" name="teamName">
-                    <button type="submit">Search by Team</button>
-                </form>
+                <div class="col-sm-4">
+                    <form onsubmit="app.controllers.playerCtrl.submitNameForm(event)">
+                        <input type="text" placeholder="Player Name" name="name">
+                        <button class="btn btn-primary" type="submit">Search by Name</button>
+                    </form>
+                </div>
+                <div class="col-sm-4">
+                    <form onsubmit="app.controllers.playerCtrl.submitTeamForm(event)">
+                        <input type="text" placeholder="Team" name="teamName">
+                        <button class="btn btn-primary" type="submit">Search by Team</button>
+                    </form>
+                </div>
+                <div class="col-sm-4">
+                    <form onsubmit="app.controllers.playerCtrl.submitPositionForm(event)">
+                        <input type="text" placeholder="Position" name="position">
+                        <button class="btn btn-primary" type="submit">Search by Position</button>
+                    </form>
+                </div>
             </div>
-            <div class="col-sm-4">
-                <form onsubmit="app.controllers.playerCtrl.submitPositionForm(event)">
-                    <input type="text" placeholder="Position" name="position">
-                    <button type="submit">Search by Position</button>
+            <!-- <div class="row">
+                <form onsubmit="app.controllers.playerCtrl.getAllPlayers(e)">
+                    <button type="submit">Get All NFL Players</button>
                 </form>
-            </div>
+            </div> -->
         </div>
-        <!-- <div class="row">
-            <form onsubmit="app.controllers.playerCtrl.getAllPlayers(e)">
-                <button type="submit">Get All NFL Players</button>
-            </form>
-        </div> -->
-    </div>
-    <div class="container">
-        <div class="card">
-            <div class="card-header">
-                Your Team
+        <div class="container">
+            <div class="card cards-bg-stack-opacity">
+                <div class="card-header">
+                    Your Team
+                </div>
+                <div class="card-body my-team" id="my-team">
+                    <div class="player-card">
+                        <div class="card-mg-top player-image">
+                            <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/" alt="NFL Player Photo"> </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item player-name">Player Name</li>
+                            <li class="list-group-item position">Position</li>
+                            <li class="list-group-item team">Team</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="card-body my-team" id="my-team">
-                <div class="player-card">
-                    <div class="card-mg-top player-image">
-                        <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/" alt="NFL Player Photo"> </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item player-name">Player Name</li>
-                        <li class="list-group-item position">Position</li>
-                        <li class="list-group-item team">Team</li>
-                    </ul>
+            <div class="card">
+                <div class="card-header">
+                    Select Your NFL Roster
+                </div>
+                <div class="card-body player-roster" id="roster">
+                    <div class="player-card">
+                        <div class="card-mg-top player-image">
+                            <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/" alt="NFL Player Photo"> </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item player-name">Player Name</li>
+                            <li class="list-group-item position">Position</li>
+                            <li class="list-group-item team">Team</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-header">
-                Select Your NFL Roster
-            </div>
-            <div class="card-body player-roster" id="roster">
-                <div class="player-card">
-                    <div class="card-mg-top player-image">
-                        <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/" alt="NFL Player Photo"> </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item player-name">Player Name</li>
-                        <li class="list-group-item position">Position</li>
-                        <li class="list-group-item team">Team</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </div>
+</container-fluid>
 
 
 
